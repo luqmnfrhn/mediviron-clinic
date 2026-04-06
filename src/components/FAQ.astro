@@ -1,0 +1,51 @@
+---
+import FAQItem from './FAQItem.astro';
+
+const faqs = [
+	{
+		question: 'What are your operating hours?',
+		answer: 'We are open Monday to Friday, 8:30am to 6:00pm, and Saturday 8:30am to 1:00pm. Please confirm public holiday hours via WhatsApp before visiting.',
+	},
+	{
+		question: 'Do I need an appointment?',
+		answer: 'Walk-ins are welcome. If you want a smoother visit, you can message us on WhatsApp before arriving.',
+	},
+	{
+		question: 'What panels and insurance do you accept?',
+		answer: 'We accept a selection of corporate panels and insurance providers. If yours is not listed yet, send us a quick WhatsApp message to check.',
+	},
+	{
+		question: 'Can I get a medical certificate (MC) here?',
+		answer: 'Yes. MCs can be issued after the doctor’s consultation when clinically appropriate.',
+	},
+	{
+		question: 'Do you offer ECG and ultrasound without a referral?',
+		answer: 'Yes. ECG and ultrasound are available on-site and can be arranged as part of your visit depending on clinical need.',
+	},
+	{
+		question: 'Is parking available nearby?',
+		answer: 'Parking is available in nearby commercial buildings and surrounding Jalan Imbi areas, subject to availability.',
+	},
+	{
+		question: 'Where exactly are you located?',
+		answer: 'The clinic is on Jalan Imbi, Kuala Lumpur, with convenient access from TRX, Pavilion KL, Bukit Bintang, and surrounding central KL landmarks.',
+	},
+	{
+		question: 'How do I contact the clinic?',
+		answer: 'WhatsApp is the fastest way to reach the clinic. A direct call option is also included in the contact section below.',
+	},
+];
+---
+
+<section id="faq" class="bg-white py-20">
+	<div class="section-shell">
+		<div class="mx-auto max-w-2xl text-center">
+			<p class="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">FAQ</p>
+			<h2 class="mt-3 text-3xl font-bold text-[var(--color-text)] sm:text-4xl">Frequently asked questions</h2>
+			<p class="mt-4 text-lg text-[var(--color-muted)]">A few quick answers before your visit.</p>
+		</div>
+		<div class="mx-auto mt-12 flex max-w-3xl flex-col gap-4">
+			{faqs.map((faq, index) => <FAQItem question={faq.question} answer={faq.answer} id={String(index)} />)}
+		</div>
+	</div>
+</section>
