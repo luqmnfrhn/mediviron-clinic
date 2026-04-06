@@ -1,0 +1,39 @@
+---
+import ServiceCard from './ServiceCard.astro';
+
+const services = [
+	{
+		title: 'General Practice',
+		description:
+			'From everyday illnesses to chronic care follow-up, our clinic supports consultations, medical certificates, referrals, and preventive health checks.',
+		icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />`,
+	},
+	{
+		title: 'ECG (Electrocardiogram)',
+		description:
+			'Fast on-site ECG testing for heart health assessments, employment checks, and clinical review without needing an extra trip elsewhere.',
+		icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M3 12h4l3-9 4 18 3-9h4" />`,
+	},
+	{
+		title: 'Ultrasound',
+		description:
+			'Convenient, non-invasive ultrasound imaging available in-clinic to support quicker diagnosis and a smoother patient journey.',
+		icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M8 7h8M8 11h5m-5 4h8m3 4H5a2 2 0 01-2-2V7a2 2 0 012-2h9l5 5v7a2 2 0 01-2 2z" />`,
+	},
+];
+---
+
+<section id="services" class="py-20">
+	<div class="section-shell">
+		<div class="mx-auto max-w-2xl text-center">
+			<p class="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">Services</p>
+			<h2 class="mt-3 text-3xl font-bold text-[var(--color-text)] sm:text-4xl">Modern care, close to where you are</h2>
+			<p class="mt-4 text-lg text-[var(--color-muted)]">
+				We focus on practical, accessible healthcare with experienced doctors and diagnostics available on-site.
+			</p>
+		</div>
+		<div class="mt-12 grid gap-6 md:grid-cols-3">
+			{services.map((service) => <ServiceCard {...service} />)}
+		</div>
+	</div>
+</section>
