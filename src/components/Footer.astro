@@ -1,0 +1,50 @@
+---
+const seoLinks = [
+	{ href: '/near-trx', label: 'Clinic Near TRX' },
+	{ href: '/near-pavilion', label: 'Clinic Near Pavilion' },
+	{ href: '/near-klcc', label: 'Clinic Near KLCC' },
+	{ href: '/near-bukit-bintang', label: 'Clinic Near Bukit Bintang' },
+	{ href: '/near-berjaya-times-square', label: 'Clinic Near Berjaya Times Square' },
+	{ href: '/near-jalan-imbi', label: 'Clinic on Jalan Imbi' },
+];
+---
+
+<footer class="border-t border-teal-800/40 bg-[var(--color-text)] py-12 text-teal-50">
+	<div class="section-shell grid gap-8 sm:grid-cols-3">
+		<div>
+			<h3 class="text-lg font-semibold text-white">Clinic Mediviron Jalan Imbi</h3>
+			<p class="mt-3 text-sm leading-7 text-teal-100">
+				[Address placeholder]
+				<br />
+				Jalan Imbi, 55100 Kuala Lumpur
+			</p>
+		</div>
+		<div>
+			<h3 class="text-lg font-semibold text-white">Nearby Areas</h3>
+			<ul class="mt-3 space-y-2 text-sm text-teal-100">
+				{
+					seoLinks.map((link) => (
+						<li>
+							<a href={link.href} class="transition-colors duration-200 hover:text-white">
+								{link.label}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+		<div>
+			<h3 class="text-lg font-semibold text-white">Contact</h3>
+			<p class="mt-3 text-sm leading-7 text-teal-100">
+				WhatsApp: +60X-XXXX XXXX
+				<br />
+				Mon-Fri: 8:30am - 6:00pm
+				<br />
+				Sat: 8:30am - 1:00pm
+			</p>
+		</div>
+	</div>
+	<div class="section-shell mt-8 border-t border-teal-800/60 pt-6 text-center text-xs text-teal-200">
+		© {new Date().getFullYear()} Clinic Mediviron Jalan Imbi. All rights reserved.
+	</div>
+</footer>
