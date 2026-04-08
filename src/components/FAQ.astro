@@ -41,8 +41,8 @@ const faqs = [
 	<div class="section-shell">
 		<div class="mx-auto max-w-2xl text-center">
 			<p class="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">FAQ</p>
-			<h2 class="mt-3 text-3xl font-bold text-[var(--color-text)] sm:text-4xl">Frequently asked questions</h2>
-			<p class="mt-4 text-lg text-[var(--color-muted)]">A few quick answers before your visit.</p>
+			<h2 class="mt-3 text-3xl font-bold text-text sm:text-4xl">Frequently asked questions</h2>
+			<p class="mt-4 text-lg text-muted">A few quick answers before your visit.</p>
 		</div>
 		<div class="mx-auto mt-12 flex max-w-3xl flex-col gap-4">
 			{faqs.map((faq, index) => <FAQItem question={faq.question} answer={faq.answer} id={String(index)} />)}
