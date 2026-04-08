@@ -1,4 +1,5 @@
 ---
+import { CLINIC, whatsappUrl } from '../config/clinic';
 import Layout from './Layout.astro';
 import Header from '../components/Header.astro';
 import Services from '../components/Services.astro';
@@ -19,7 +20,7 @@ const { title, description, h1, landmark, distance } = Astro.props;
 
 const miniFaqs = [
 	{ question: 'Do I need an appointment?', answer: 'Walk-ins are welcome, and you can also message us on WhatsApp before arriving.' },
-	{ question: `How far is the clinic from ${landmark}?`, answer: `Clinic Mediviron Jalan Imbi is ${distance} from ${landmark}.` },
+	{ question: `How far is the clinic from ${landmark}?`, answer: `${CLINIC.name} is ${distance} from ${landmark}.` },
 	{ question: 'What services are available?', answer: 'General practice, ECG, and ultrasound services are available on-site.' },
 ];
 
@@ -43,10 +44,10 @@ const nearbyLinks = [
 					<p class="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">Nearby Clinic</p>
 					<h1 class="mt-3 text-3xl font-bold text-[var(--color-text)] sm:text-5xl">{h1}</h1>
 					<p class="mt-5 text-lg leading-8 text-[var(--color-muted)]">
-						Clinic Mediviron Jalan Imbi is a trusted family clinic just {distance} from {landmark}, making it convenient for appointments, walk-ins, and quick check-ins during a busy KL day.
+						{CLINIC.name} is a trusted family clinic just {distance} from {landmark}, making it convenient for appointments, walk-ins, and quick check-ins during a busy KL day.
 					</p>
 					<a
-						href="https://wa.me/60XXXXXXXXXX"
+						href={whatsappUrl()}
 						target="_blank"
 						rel="noopener noreferrer"
 						class="cta-primary mt-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:ring-offset-2"

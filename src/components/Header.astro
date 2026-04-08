@@ -1,4 +1,6 @@
 ---
+import { CLINIC, whatsappUrl } from '../config/clinic';
+
 const navLinks = [
 	{ href: '#services', label: 'Services' },
 	{ href: '#panel', label: 'Panel' },
@@ -14,12 +16,12 @@ const navLinks = [
 				M
 			</div>
 			<div class="leading-tight">
-				<p class="font-heading text-base font-semibold text-teal-800">Mediviron</p>
-				<p class="text-sm text-[var(--color-muted)]">Jalan Imbi</p>
+				<p class="font-heading text-base font-semibold text-teal-800">{CLINIC.shortName}</p>
+				<p class="text-sm text-muted">{CLINIC.area}</p>
 			</div>
 		</a>
 
-		<nav class="hidden items-center gap-6 text-sm font-medium text-[var(--color-text)] md:flex">
+		<nav class="hidden items-center gap-6 text-sm font-medium text-text md:flex">
 			{
 				navLinks.map((item) => (
 					<a href={item.href} class="transition-colors duration-200 hover:text-teal-600">
@@ -30,7 +32,7 @@ const navLinks = [
 		</nav>
 
 		<a
-			href="https://wa.me/60XXXXXXXXXX"
+			href={whatsappUrl()}
 			target="_blank"
 			rel="noopener noreferrer"
 			class="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2 text-sm font-semibold text-white shadow-sm transition duration-200 hover:brightness-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400 focus-visible:ring-offset-2 motion-reduce:transition-none"

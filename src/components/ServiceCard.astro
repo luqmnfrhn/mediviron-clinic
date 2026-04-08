@@ -1,4 +1,6 @@
 ---
+import { whatsappUrl } from '../config/clinic';
+
 interface Props {
 	icon: string;
 	title: string;
@@ -12,10 +14,10 @@ const { icon, title, description } = Astro.props;
 	<div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-50 text-teal-700">
 		<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" set:html={icon} />
 	</div>
-	<h3 class="mt-5 text-2xl font-semibold text-[var(--color-text)]">{title}</h3>
-	<p class="mt-3 flex-1 text-base leading-7 text-[var(--color-muted)]">{description}</p>
+	<h3 class="mt-5 text-2xl font-semibold text-text">{title}</h3>
+	<p class="mt-3 flex-1 text-base leading-7 text-muted">{description}</p>
 	<a
-		href="https://wa.me/60XXXXXXXXXX"
+		href={whatsappUrl()}
 		target="_blank"
 		rel="noopener noreferrer"
 		class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-teal-700 transition-colors duration-200 hover:text-teal-800"

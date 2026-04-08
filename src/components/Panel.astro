@@ -1,4 +1,6 @@
 ---
+import { whatsappUrl } from '../config/clinic';
+
 const panels = ['Panel A', 'Panel B', 'Panel C', 'Panel D', 'Panel E', 'Panel F', 'Panel G', 'Panel H'];
 ---
 
@@ -6,24 +8,24 @@ const panels = ['Panel A', 'Panel B', 'Panel C', 'Panel D', 'Panel E', 'Panel F'
 	<div class="section-shell">
 		<div class="mx-auto max-w-2xl text-center">
 			<p class="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">Panel & Insurance</p>
-			<h2 class="mt-3 text-3xl font-bold text-[var(--color-text)] sm:text-4xl">Panel & Insurance Accepted</h2>
-			<p class="mt-4 text-lg text-[var(--color-muted)]">
+			<h2 class="mt-3 text-3xl font-bold text-text sm:text-4xl">Panel & Insurance Accepted</h2>
+			<p class="mt-4 text-lg text-muted">
 				Placeholder names are shown for now and can be replaced with the clinic’s confirmed panels and logos later.
 			</p>
 		</div>
 		<div class="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
 			{
 				panels.map((name) => (
-					<div class="flex h-20 items-center justify-center rounded-2xl border border-teal-100 bg-teal-50/70 px-4 text-center text-sm font-semibold text-[var(--color-muted)]">
+					<div class="flex h-20 items-center justify-center rounded-2xl border border-teal-100 bg-teal-50/70 px-4 text-center text-sm font-semibold text-muted">
 						{name}
 					</div>
 				))
 			}
 		</div>
-		<p class="mt-8 text-center text-sm text-[var(--color-muted)]">
+		<p class="mt-8 text-center text-sm text-muted">
 			Don&apos;t see your panel?
 			<a
-				href="https://wa.me/60XXXXXXXXXX"
+				href={whatsappUrl()}
 				target="_blank"
 				rel="noopener noreferrer"
 				class="ml-1 font-semibold text-teal-700 underline decoration-teal-300 underline-offset-4"
