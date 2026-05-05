@@ -24,7 +24,7 @@ export const CLINIC = {
     saturday: 'Saturday: 9:00am – 4:30pm',
     sunday: 'Sunday & Public Holidays: 9:00am – 4:30pm',
     weekdaysShort: 'Mon–Fri: 8:30am – 6:00pm',
-    saturdayShort: 'Sat: 8:30am – 1:00pm',
+    weekendShort: 'Sat,Sun & Public: 9:00am – 4:30pm',
     weekend_public: 'Saturday, Sunday & Public Holidays: 9:00am – 4:30pm',
   },
 
